@@ -28,6 +28,7 @@ public class Main : MonoBehaviour
             child.gameObject.AddComponent<Rigidbody>().useGravity = false;
             child.gameObject.GetComponent<Rigidbody>().mass = partMass;
             child.gameObject.GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.Continuous;
+            child.gameObject.GetComponent<Rigidbody>().interpolation = RigidbodyInterpolation.Interpolate;
             child.gameObject.AddComponent<MeshCollider>().convex = true;
             child.gameObject.GetComponent<MeshCollider>().material = physicMaterial;
 
